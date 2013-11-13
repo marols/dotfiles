@@ -1,0 +1,61 @@
+[user]
+        name = Martin Walter
+        email = martin.walter.swe@gmail.com
+
+[color]
+# ui = true is a superset of all the more specific color options
+#  as documented at http://book.git-scm.com/5_customizing_git.html
+# When set to always, always use colors in all git commands which are capable of colored output.
+# When false, never. When set to true or auto, use colors only when the output is to the terminal.
+# When more specific variables of color.* are set, they always take precedence over this setting.
+# Defaults to false.
+        ui = auto
+        # diff = auto
+        # status = auto
+        # branch = auto
+        
+[color "branch"]
+        #current = yellow reverse
+        #local = yellow
+        #remote = green
+[color "diff"]
+        #meta = yellow bold
+        #frag = magenta bold
+        #old = red bold
+        #new = green bold
+[color "status"]
+        #added = yellow
+        #changed = green
+        #untracked = cyan
+
+[core]
+        excludesfile = ~/.gitignore
+        quotepath = false
+        #editor = vim
+
+[alias]
+        br = branch -a
+        s = status -u -s
+        cl = log --stat -C -2
+        c = commit
+        co = checkout
+        d = diff --color-words
+        dh = diff HEAD
+        dc = diff --staged
+        dw = diff --word-diff
+        dcw = diff --color-words
+        dm = !git diff | mate
+        dv = !git diff | vim
+        who = shortlog -s --
+        ph = push
+        pl = pull
+        lp = log -p
+        lg = log --graph
+
+[apply]
+        whitespace = nowarn
+
+[github]
+        # https://github.com/marols
+        user = marols
+        #token = PLACEHOLDER
